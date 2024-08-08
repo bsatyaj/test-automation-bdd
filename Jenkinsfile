@@ -5,12 +5,6 @@ pipeline {
         timeout(time: 1, unit: 'SECONDS')
     }
     stages {
-        stage('Checkout') {
-            steps {
-                echo 'Checking out !!'
-                git branch: 'main', url: 'https://github.com/bsatyaj/test-automation-bdd.git'
-            }
-        }
         stage('Test'){
             steps {
                 echo 'Testing !!'
